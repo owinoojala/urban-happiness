@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        table,th,td{border: 1px solid black;}
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<body>
+       
+    <table style = "width: 70%">
+
+        <th>
+            <th>
+                <td>Order ID</td><td>Order Name</td><td>No. of pages</td><td>Sources</td><td>Style</td>
+
+            </th>
+        </th>
+    </table>
+    
+    
+             <!-- <form action='add' method ="post"><br>
+
+                {% csrf_token %}
+
+                    First number: <input type="number" name="num1"><br><br>
+                    Second number: <input type="number" name="num2"><br><br>
+                    <input type="submit">
+             </form>  -->
+             <br><br>
+            <form action="hours_ahead" method="post">
+
+                {% csrf_token %}
+                Offset: <input type="number" name="offset" id="off_set"><br><br>
+                <input type="submit">
+            </form>          
+</body>
+
+</html>
+{% endblock %}
